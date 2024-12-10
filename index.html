@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- App Container -->
+  <div class="app-container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Khadem's To-Do</h1>
+      <div class="hamburger-menu" onclick="toggleProfile()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-section" id="profileSection">
+      <img src="profile-image.png" alt="Profile Picture">
+      <p><strong>Name:</strong> Khadem Ali</p>
+      <p><strong>Email:</strong> khademgenu@gmail.com</p>
+    </div>
+
+    <!-- Task List -->
+    <div class="task-list" id="taskList">
+      <!-- Tasks will be added dynamically here -->
+    </div>
+
+    <!-- Add Task Form -->
+    <form class="add-task-form" id="taskForm">
+      <input type="text" id="taskInput" placeholder="What do you want to do?" required />
+      <input type="date" id="taskDate" value="" required />
+      <input type="time" id="taskTime" value="" required />
+      <div class="categories">
+        <div class="category" onclick="selectCategory('Personal')">Personal</div>
+        <div class="category" onclick="selectCategory('Work')">Work</div>
+        <div class="category" onclick="selectCategory('Study')">Study</div>
+      </div>
+      <button type="submit" class="add-btn">Add Task</button>
+    </form>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <button>© Khadem 2024</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
